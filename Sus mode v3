@@ -1,0 +1,7 @@
+local blacklisted = {["pedrogear58"] = true}
+
+game.Players.PlayerAdded:Connect(function(plr)
+	if blacklisted[plr.Name] then 
+		plr:Kick "ByFron Has Detected Exploits!"
+	end
+end)
